@@ -1,0 +1,233 @@
+/*
+  1. Use a more-intuitive box-sizing model.
+*/
+*, *::before, *::after {
+    box-sizing: border-box;
+  }
+  /*
+    2. Remove default margin
+  */
+  * {
+    margin: 0;
+  }
+  /*
+    3. Allow percentage-based heights in the application
+  */
+  html, body {
+    height: 100%;
+  }
+  /*
+    Typographic tweaks!
+    4. Add accessible line-height
+    5. Improve text rendering
+  */
+  body {
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+
+    display: grid;
+    place-content: center;
+    height: 100vh;
+
+    background-image: url('images/bg-mobile.svg');
+    background-repeat: no-repeat;
+    background-size: 23.8rem;
+    background-color: hsl(257, 40%, 49%);
+  }
+  /*
+    6. Improve media defaults
+  */
+  img, picture, video, canvas, svg {
+    display: block;
+    max-width: 100%;
+  }
+  /*
+    7. Remove built-in form typography styles
+  */
+  input, button, textarea, select {
+    font: inherit;
+  }
+  /*
+    8. Avoid text overflows
+  */
+  p, h1, h2, h3, h4, h5, h6 {
+    overflow-wrap: break-word;
+  }
+  /*
+    9. Create a root stacking context
+  */
+  #root, #__next {
+    isolation: isolate;
+  }
+
+  .content {
+    min-height: 100%;
+  }
+
+  .top-img {
+    width: 9rem;
+    padding-bottom: 2rem;
+    margin-top: 2rem;
+    margin-left: 1.6rem;
+    margin-bottom: 2.6rem;
+  }
+
+  .main-img {
+    padding: 0px 1.4rem;
+    padding-bottom: 12rem;
+  }
+
+
+  .heading {
+    font-family: "Poppins", sans-serif;
+    font-weight: 700;
+    font-size: 1.8rem;
+    color: white;
+
+    position: relative;
+    bottom: 7.6rem;
+    text-align: center;
+    margin: 0px 1.4rem;
+  }
+
+  p {
+    font-family: "Open Sans", sans-serif;
+    font-size: 1.2rem;
+    color: white;
+
+    position: relative;
+    bottom: 6rem;
+    text-align: center;
+    padding: 0px;
+}
+
+  .btn {
+    position: relative;
+    left: 4.6rem;
+    bottom: 5rem;
+
+    color: hsl(257, 40%, 49%);
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+    font-size: .9rem;
+    text-decoration: none;
+    background-color: white;
+    padding: .8rem 5.4rem;
+    height: 3rem;
+    border-radius: 2rem;
+  }
+
+  .socials {
+    display: inline-flex;
+    position: relative;
+    top: 2rem;
+    right: 6rem;
+    margin-bottom: 7rem;
+    width: 30px;
+    
+}
+
+.F {
+    position: relative;
+    right: 1rem;
+    padding: 4px;
+    border: 1px solid white;
+    border-radius: 2rem;
+}
+
+.T {
+    padding: 4px;
+    border: 1px solid white;
+    border-radius: 2rem;
+}
+
+.I {
+    position: relative;
+    left: 1rem;
+    padding: 4px;
+    border: 1px solid white;
+    border-radius: 2rem; 
+}
+
+.btn:hover {
+    color: white;
+    background-color: hsl(300, 69%, 71%);
+    cursor: pointer;
+}
+
+.socials:hover {
+    color: white;
+    border: hsl(300, 69%, 71%);
+    cursor: pointer;
+}
+
+@media only screen and (min-width: 1000px) {
+    body {
+        background-image: url(images/bg-desktop.svg);
+        background-size: 99em;
+        background-attachment: fixed;
+        max-width: 1440px;
+    }
+    
+    .top-img {
+        position: relative;
+        left: 4.3em;
+        top: 2.6em;
+        width: 14em;
+    }
+
+    .main-img {
+        position: relative;
+        left: 4em;
+        top: 3em;
+        width: 58em;
+    }
+
+    .heading {
+        position: relative;
+        bottom: 23em;
+        left: 32em;
+        text-align: left;
+        font-size: 2em;
+        padding-right: 32em;
+    }
+
+    p {
+        position: relative;
+        bottom: 36.6em;
+        left: 37.5rem;
+        padding: 0px 23.34em;
+        text-align: left;
+    }
+
+    .btn {
+        position: relative;
+        bottom: 46em;
+        left: 73em;
+        
+        padding: 1em 3.8em;
+        box-shadow: 10px 10px 130px black;
+    }
+
+    .socials {
+        float: right;
+    }
+    
+    .F {
+        position: relative;
+        bottom: 20em;
+        left: 20em;
+    }
+
+    .T {
+        position: relative;
+        bottom: 20em;
+        left: 21em;
+    }
+
+    .I {
+        position: relative;
+        bottom: 20em;
+        left: 22em;
+    }
+}
